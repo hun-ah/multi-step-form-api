@@ -8,11 +8,7 @@ const PORT = 5000;
 const userInfoRoute = require('./routes/userInfo');
 
 // Middleware...
-app.use(
-  cors({
-    origin: true,
-  })
-);
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

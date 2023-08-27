@@ -7,15 +7,8 @@ const PORT = 5000;
 // Route variable
 const userInfoRoute = require('./routes/userInfo');
 
-// cors
-const corsOptions = {
-  origin: 'http://localhost:5173',
-  methods: 'GET,POST',
-  allowedHeaders: 'Content-Type,Authorization',
-};
-
 // Middleware...
-app.use(cors(corsOptions));
+app.use(cors);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

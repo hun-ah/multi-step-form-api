@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routes
-app.use('/submitUserInfo', userInfoRoute);
+app.use('/', userInfoRoute);
 
 connectDB().then(() => {
   app.listen(process.env.PORT || PORT, () =>
